@@ -1,0 +1,294 @@
+/* Estilização geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #171318;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: #9a39e6 1px solid;
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+   font-family: "Just Me Again Down Here", cursive;
+   margin-left:20px;
+}
+
+.logo{}
+
+header p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* Estilização da Navbar */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+
+}
+
+nav a:hover {
+    color: #b451ff;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.botao{
+padding: 10px 20px;
+background-color:#b451ff;
+border: none;
+border-radius: 60px;
+cursor: pointer;
+color: white;
+font-size: 16px;
+
+
+}
+
+/* inicio */
+
+main{
+    background-color: #171318;
+    height: 90vh;
+}
+
+.ola{
+    color: white;
+    font-size: 64px;
+    margin-top: 100px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.front{
+    color: white;
+    font-size: 64px;
+    margin-top: -20px;
+    font-family: "Josefin Sans", sans-serif;
+    display: block;
+    border-right: 16px solid #9a39e6;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20ch;
+    animation: piscando .5s step-end infinite, write 6s steps(22, end) infinite;
+}
+
+@keyframes piscando {
+
+    50% { border-color: transparent; }
+}
+
+@keyframes write {
+    20% {
+         width: 20ch; 
+    }
+    70% {
+         width: 20ch; 
+    }
+    85% {
+         width: 0ch; 
+    }
+    100% {
+         width: 0ch; 
+    }
+
+}
+
+.nome{
+    color: #b451ff;
+    font-size: 64px;
+    margin-top: -20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.botoes{
+
+margin-top: 20px;
+display: flex;
+gap: 40px;
+border: #fff solid 1px;
+;
+}
+
+
+
+
+.botao-imagem{
+display: flex;
+width: 100px;
+height: auto;
+background-color: #9a39e6;
+border-radius: ;
+}
+
+.botao-imagem2{
+height: 50px;
+width: 50px;
+display: flex;
+width: 100px;
+height: auto;
+background-color: #9a39e6;
+border-radius: ;
+}
+
+
+
+
+
+
+
+
+/* Main content styles */
+main {
+    
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilos de Section */
+
+
+/*section sobre*/
+section{
+    margin-bottom: 40px;
+    background: #171318;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+}
+
+.textosobre{
+    line-height: 28px;
+    font-size: 30px;
+    margin-left: 40px;
+    color: white;
+    font-family: josefin sans;
+}
+
+
+.foto{
+    /* Tornar a imagem responsiva e com tamanho menor */
+    width: 220px;
+    max-width: 100%;
+    height: auto; /* mantém proporção */
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 4px solid #b451ff;
+}
+
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b451ff;
+}
+
+/* Portfolio grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.portfolio-item {
+    background: #f0f4ff;
+    border-radius: 6px;
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.portfolio-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/*Habilidades*/
+
+
+/*Projetos*/
+
+.projetos{
+    color: #ffffff;
+
+}
+
+/*contato*/
+
+
+/* Footer styles */
+footer {
+    background: #171318;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+/* Custom cursor */
+
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    main {
+        padding: 0 8px;
+    }
+    section {
+        padding: 16px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
