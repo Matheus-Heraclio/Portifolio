@@ -336,13 +336,26 @@ width: 4rem;
     text-align: center;
 }
 
+.projeto-card{
+    background-color: rgb(33, 33, 33);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: #b451ff solid 1px;
 
+
+}
 
 /*contato*/
 
 .contato{
     color: #ffffff;
     border: #b451ff solid 1px;
+}
+
+.contato h2{
+    text-align: center;
+    color: #b451ff;
 }
 
 /* Footer styles */
