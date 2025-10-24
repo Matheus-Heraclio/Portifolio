@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+html{
+scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 200px; /* esse 80px é o mesmo tamanho da navbar */
+}
+
+
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -33,7 +42,7 @@ header h1 {
    margin-left:20px;
 }
 
-.logo{}
+
 
 header p {
     font-size: 1.2rem;
@@ -81,8 +90,8 @@ font-size: 16px;
 /* inicio */
 
 .inicio{
-height: 700px;
-
+height: 900px;
+border: #9a39e6 solid 2px;
 }
 
 main{
@@ -93,7 +102,7 @@ main{
 .ola{
     color: white;
     font-size: 64px;
-    margin-top: 100px;
+    margin-top: 250px;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -110,6 +119,12 @@ main{
     animation: piscando .5s step-end infinite, write 6s steps(22, end) infinite;
 }
 
+.textos-inicio{
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    border: #9a39e6 solid 2px   ;
+}
 @keyframes piscando {
 
     50% { border-color: transparent; }
@@ -139,12 +154,9 @@ main{
 }
 
 .botoes{
-
-margin-top: 20px;
-display: flex;
-gap: 40px;
-
-
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 
@@ -171,6 +183,34 @@ border-radius:0 ;
 }
 
 
+.scroll-down {
+  position: absolute;
+  bottom: 100px; /* ajusta a seta aq */
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+
+.scroll-down .arrow {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  40% {
+    transform: rotate(45deg) translateY(10px);
+  }
+  60% {
+    transform: rotate(45deg) translateY(5px);
+  }
+}
 
 
 
@@ -215,9 +255,11 @@ section{
     text-align: left;
 }
 
+
+
 .foto{
 
-    width: 220px;
+    width: 400px;
     max-width: 100%;
     height: auto; 
     display: block;
@@ -233,7 +275,8 @@ section h2 {
 }
 
 .botao-baixar{
-    margin-top: 20px;
+    display: flex;
+    margin-top: 45px;
     padding: 10px 30px;
     background-color:#b451ff;
     border: none;
@@ -242,9 +285,11 @@ section h2 {
     color: white;
     font-size: 16px;
     text-decoration: none;
+    width: fit-content;
 }
 
 /* Portfolio grid */
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -314,8 +359,25 @@ border: #b451ff solid 1px;
     transition: 0.2s; 
     border: #b451ff solid 1px;
     
-
 }
+
+.box:hover {
+  animation: pulse 0.6s;
+}
+
+
+/* animação bounce */
+
+@keyframes pulse {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+
+
 .box p {
 font-family: "DM Sans", sans-serif;
     font-size: 1.6rem;
@@ -343,49 +405,184 @@ width: 4rem;
     margin: 1rem;
     border: #b451ff solid 1px;
 
+}
 
+
+.projeto-card:hover {
+  animation: pulse 0.6s;
 }
 
 /*contato*/
-
-.contato{
-    color: #ffffff;
-    border: #b451ff solid 1px;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
-.contato h2{
-    text-align: center;
-    color: #b451ff;
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7.5rem;
 }
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.box3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    border-radius: 50%;
+    
+}
+
+.box3 img{
+    padding: 1.5rem;
+    
+
+}
+
+.contatos .icons .icon a p {
+    font-family: "josefin sans";
+    font-size: 1.8rem;
+    color: rgb(161, 158, 158);
+    font-size: medium; 
+    
+}
+
+.head-line{
+    font-size: larger;
+    color: white;
+
+}
+
+
+
+
+
 
 /* Footer styles */
 footer {
-    background: #ba00e9;
+    background: #4A3255;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
     width: 100%;
+    font-family: "josefin sans";
 }
 
 /* Custom cursor */
 
 
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    main {
-        padding: 0 8px;
+
+
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .ola, .front, .nome {
+        font-size: 48px;
     }
-    section {
-        padding: 16px;
+    .containersobre {
+        flex-direction: column;
     }
-    header h1 {
-        font-size: 2rem;
+    .foto {
+        width: 300px;
     }
-    section h2 {
-        font-size: 1.4rem;
+    .textosobre {
+        font-size: 24px;
+        margin-left: 0;
+        text-align: center;
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 10px;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .ola, .front, .nome {
+        font-size: 36px;
+    }
+    
+    .botoes {
+        justify-content: center;
+    }
+    
+    .cardshabilidades {
+        gap: 20px;
+    }
+    
+    .box {
+        width: 10rem;
+    }
+    
+    .icons {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+       .inicio {
+        height: 400px;
+        padding: 0 10px;
+        border: olivedrab 2px solid;
+    }
+    
+    .ola, .front, .nome {
+        font-size: 32px;
+        margin-top: 0px;
+    }
+    
+    .front {
+        width: 15ch;
+    }
+    
+    .botoes {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .sobre, .habilidades, .projetos {
+        padding: 15px;
+    }
+    
+    .box {
+        width: 8rem;
+    }
+    
+    .projeto-card {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .ola, .front, .nome {
+        font-size: 24px;
+    }
+    
+    .botao {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 

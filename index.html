@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
 </head>
+    <link rel="shortcut icon" href="/imagens/MH logo2.png">
 <body>
 
     <!-- navbar-->
@@ -24,11 +25,11 @@
             <ul class="nav-list">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
+                 <li><a href="#habilidades">habilidades</a></li>
                 <li><a href="#projetos">projetos</a></li>
-                <li><a href="#" class="botao">contatos</a></li>
+                <li><a href="#contatos" class="botao">contatos</a></li>
             </ul>
-        </nav>
-        
+        </nav> 
     </header>
 
 
@@ -36,27 +37,33 @@
     <!-- Conteudo principal-->
 
     <main>  
-        <section class="inicio"
+        <section id="inicio" class="inicio"
+        
 >       <h1 class="ola">Olá, eu sou</h1>
         <h1 class="nome">Matheus Heraclio</h1>
         <h1 class="front">Desenvolvedor Front-end</h1>
+            
         <div class="botoes">
             <a href="https://github.com/Matheus-Heraclio"><img src="/imagens/github.png" alt="" class="botao-imagem"></a>
             <a href="https://www.linkedin.com/in/matheus-heraclio-704944179"><img  src="/imagens/linkedin (1).png" alt="" class="botao-imagem2"></a>
-        </div>
-
-</section>
+                    <a href="#proxima-secao" class="scroll-down">
+                    <i id="sobre" class="arrow"></i>
+                    </a>
+                </div>
+            </section>
 
 <!-- parte sobre mim-->
 
-<section class="sobre">
+<section id="sobre" class="sobre">
     <div class="containersobre">
         
         <img src="/imagens/Imagem.png" alt="foto" class="foto">
             <div class="textosobre">
                 <h2>Sobre Mim</h2>
-            <p>Sou um estudante de sistesmas de informação(SI) e desenvolvedor Front-End | Ux/UI design com 19 anos de idade e 2+ anos de de experiencia em criação de interfaces e soluções inovadoras e eficientes .</p>
-               <a href="Curriculo Matheus Heraclio Monteiro dos Santos.pdf" class="botao-baixar">Baixar CV</a>
+            <p>Sou um estudante de sistesmas de informação(SI) e desenvolvedor Front-End | Ux/UI design com 19 anos de idade e 2+ anos de de experiencia em criação de interfaces e soluções inovadoras e eficientes . <br> 
+           <br> Gosto de criar interfaces e desenvolver sites que não só funcionem bem, mas que surpreendam o cliente. Curto ver a ideia saindo do papel e ganhando vida, sempre buscando entregar algo acima do esperado. Tenho um foco especial em Front-end e UX/UI, e tô sempre estudando pra elevar o nível dos meus projetos e deixar cada entrega melhor que a anterior..
+            </p>
+               <a href="/curriculo/Curriculo Matheus Heraclio Monteiro dos Santos.pdf" class="botao-baixar">Baixar CV</a>
         </div>
 
     </div>
@@ -64,7 +71,7 @@
 
 <!-- habilidades-->
     
-    <section class="habilidades">
+    <section id="habilidades" class="habilidades">
         <h1>Habilidades</h2>
        <div class="cardshabilidades">
             <div class="box">
@@ -103,17 +110,17 @@
     
 <!-- projetos-->
 
-    <section class="projetos">
+    <section id="projetos" class="projetos">
         <h2>Projetos</h2>
        <div class="box2">
         <div class="projeto-card">
             <img src="/imagens/projeto1.png" alt="Projeto 1" class="projeto-imagem">
-            <h3>Projeto 1</h3>
+            <h3>MD Eco</h3>
             <p>Descrição do projeto 1.</p>
         </div>
         <div class="projeto-card">
             <img src="/imagens/projeto2.png" alt="Projeto 2" class="projeto-imagem">
-            <h3>Projeto 2</h3>
+            <h3>Site de receitas</h3>
             <p>Descrição do projeto 2.</p>
         </div>
         <div class="projeto-card">
@@ -131,17 +138,37 @@
 
     <!-- contato-->
 
-    <section class="contato">
-        <h2>Contato</h2>
-       <div class="box3">
-        <img src="/imagens/email.png" alt="Email Icon" class="contato-icone">
-        <h3>Email</h3>
-        <p> matheusheraclio762@gmail.com</p>
-        </div>
+    <section id="contatos" class="contatos">
+       <div class="container">
+        <h2>Contatos</h2>
+        <div class="icons">
+          <div class="icon">
+            <a href="mailto:matheusheraclio762@gmail.com" target="_blank">
+              <div class="box3">
+                <img src="/imagens/Email.png" alt="e-mail">
+              </div>
+            </a>
+            <a href="mailto:matheusheraclio762@gmail.com" target="_blank">
+              <h4 class="head-line">E-mail</h4>
+            </a>
+            <a href="mailto:matheusheraclio762@gmail.com" target="_blank">
+              <p>matheusheraclio762@gmail.com</p>
+            </a>
+          </div>
 
-        <div class="box3">
-        <img src="#" alt="" class="
-
+          <div class="icon">
+            <a href="https://api.whatsapp.com/send?phone=5581994054733" target="_blank">
+              <div class="box3">
+                <img src="/imagens/telefone.png" alt="telefone">
+              </div>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5581994054733" target="_blank">
+              <h4 class="head-line">Telefone</h4>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5581994054733" target="_blank">
+              <p>(81) 99405-4733</p>
+            </a>
+          </div>
 
 
 
@@ -163,6 +190,7 @@
  
 <!-- Custom cursor element -->
      
+
 
  </body>
 </html>
