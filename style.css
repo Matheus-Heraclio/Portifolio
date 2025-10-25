@@ -32,6 +32,7 @@ header {
     top: 0;
     width: 100%;
     border-bottom: #9a39e6 1px solid;
+    z-index: 1000;
 }
 
 
@@ -358,7 +359,6 @@ border: #b451ff solid 1px;
     padding: 0px;
     transition: 0.2s; 
     border: #b451ff solid 1px;
-    
 }
 
 .box:hover {
@@ -586,3 +586,7 @@ footer {
     }
 }
 
+
+.sobre{
+   
+}
