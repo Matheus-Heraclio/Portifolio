@@ -92,7 +92,7 @@ font-size: 16px;
 
 .inicio{
 height: 900px;
-border: #9a39e6 solid 2px;
+
 }
 
 main{
@@ -124,7 +124,7 @@ main{
     display: flex;
     align-items: center;
     padding-bottom: 50px;
-    border: #9a39e6 solid 2px   ;
+  
 }
 @keyframes piscando {
 
@@ -239,7 +239,7 @@ section{
     display: flex;
     align-items: center;
     gap: 20px;
-    border: #b451ff solid 1px;
+  
 }
 
 .containersobre{
@@ -322,7 +322,7 @@ section h2 {
 /*Habilidades*/
 
 .habilidades{
-border: #b451ff solid 1px;
+
     display: flex;
     flex-direction: column;
     
@@ -358,11 +358,11 @@ border: #b451ff solid 1px;
     cursor: pointer;
     padding: 0px;
     transition: 0.2s; 
-    border: #b451ff solid 1px;
+
 }
 
 .box:hover {
-  animation: pulse 0.6s;
+  transform: scale(1.1);
 }
 
 
@@ -394,7 +394,6 @@ width: 4rem;
 
 .projetos{
     color: #ffffff;
-    border: #b451ff solid 1px;
     text-align: center;
 }
 
@@ -403,14 +402,49 @@ width: 4rem;
     border-radius: 1rem;
     padding: 1rem;
     margin: 1rem;
-    border: #b451ff solid 1px;
-
+    cursor: pointer;
+     width: 300px;
+    height: 300px;
+    padding-top: 100px;
 }
 
+.box2{
+display: flex;
+justify-content: center;
+
+}
 
 .projeto-card:hover {
   animation: pulse 0.6s;
+  
 }
+
+
+.modals{
+  position: relative;
+    top: 500px;
+
+}
+
+.meumodal1{
+  width: 300px;
+  height: auto;
+   position: fixed;
+   top: 500px;
+    border: #b451ff 3px solid;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*contato*/
 .container{
@@ -480,6 +514,18 @@ footer {
 }
 
 /* Custom cursor */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

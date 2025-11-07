@@ -1,7 +1,14 @@
-window.sr = scrollreveal({reset: true});
+const moldal1 = document.getElementById ("moldal1")
+const dialog = document.getElementById ("meumoldal")
+moldal1.addEventListener("click", abrirmoldal)
+    function abrirmoldal(){
+        dialog.showModal();
+    document.body.style.overflow = "hidden";
+    }
 
-sr.reveal('.sobre',{
-    duration: 1000,
-
-    
-});
+const closemodal = document.getElementById ("closemodal")
+    closemodal.addEventListener("click", fecharmodal)
+        function fecharmodal(){
+            dialog.close();
+                document.body.style.overflow = "";
+        }
