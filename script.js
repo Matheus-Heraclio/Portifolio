@@ -116,15 +116,16 @@ const sr = ScrollReveal({
     origin: 'top',
     distance: '50px',
     duration: 2000,
-    delay: 200,
-    reset: false // Define como true se quiser que a animação repita toda vez que rolar
+    delay: 100,
+    reset: true // Define como true se quiser que a animação repita toda vez que rolar
 });
 
 // Animações para a seção Início
-sr.reveal('.ola', { delay: 300, origin: 'left' });
-sr.reveal('.nome', { delay: 500, origin: 'left' });
-sr.reveal('.front', { delay: 700, origin: 'left' });
-sr.reveal('.botoes-inicio', { delay: 900, origin: 'bottom' });
+sr.reveal('.ola', { delay: 50, origin: 'left' });
+sr.reveal('.nome', { delay: 150, origin: 'left' });
+sr.reveal('.front', { delay: 250, origin: 'left' });
+sr.reveal('.botoes-inicio', { delay: 350, origin: 'bottom' });
+sr.reveal('.scroll-indicator', { delay: 450, origin: 'bottom' });
 
 // Animações para a seção Sobre Mim
 sr.reveal('.foto', { delay: 300, origin: 'left' });
