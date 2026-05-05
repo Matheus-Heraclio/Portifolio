@@ -14,7 +14,14 @@ body {
     background: #171318;
     color: white;
     line-height: 1.6;
+    min-height: 100vh;
     overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Evita que elementos apareçam antes do ScrollReveal carregar */
@@ -191,6 +198,10 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+.textosobre b {
+    font-size: 20px;
+}
+
 .botao-baixar {
     display: inline-block;
     padding: 12px 35px;
@@ -311,7 +322,7 @@ nav a:hover {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
@@ -514,12 +525,21 @@ nav a:hover {
 }
 
 .modal-content-left { flex: 1; text-align: left; }
-.modal-content-right { flex: 1; }
+.modal-content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .imagem-modal {
     width: 100%;
+    max-width: 100%;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
 }
 
 .modal-actions {
@@ -597,6 +617,7 @@ nav a:hover {
     justify-content: center;
     gap: 50px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .icon-box {
@@ -604,7 +625,14 @@ nav a:hover {
     border: 1px solid rgba(154, 57, 230, 0.2);
     padding: 40px;
     border-radius: 25px;
-    width: 300px;
+    min-width: 240px;
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
@@ -613,7 +641,15 @@ nav a:hover {
     transform: translateY(-10px);
 }
 
-.icon-box img { width: 60px; margin-bottom: 20px; }
+.icon-box img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.icon-box h4,
+.icon-box p {
+    margin: 0;
+}
 
 footer {
     padding: 40px;
@@ -635,3 +671,43 @@ footer {
     .modal-content-lightbox { width: 100%; }
     .close-lightbox { right: 20px; top: 10px; }
 }
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    nav .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container-limit {
+        padding: 0 15px;
+    }
+
+    .botoes-inicio {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projetos-grid,
+    .certificados-grid,
+    .cardshabilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-card-btns,
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .botao-social,
+    .btn-projeto,
+    .modal-btn-primary,
+    .modal-btn-secondary {
+        width: 100%;
+    }
+}
+

@@ -15,11 +15,14 @@ function abrirAba(evt, nomeAba) {
     }
 
     // Mostrar a aba atual e adicionar a classe 'active' ao botão que a abriu
-    document.getElementById(nomeAba).classList.add("active");
+    const abaAtual = document.getElementById(nomeAba);
+    if (!abaAtual) return;
+
+    abaAtual.classList.add("active");
     evt.currentTarget.classList.add("active");
 
     // Forçar visibilidade dos itens que podem ter sido escondidos pelo ScrollReveal
-    const itensAba = document.getElementById(nomeAba).querySelectorAll('.certificado-item, .box');
+    const itensAba = abaAtual.querySelectorAll('.certificado-item, .box');
     itensAba.forEach(item => {
         item.style.opacity = "1";
         item.style.visibility = "visible";
@@ -31,7 +34,11 @@ function abrirAba(evt, nomeAba) {
 function abrirModal(idModal) {
     const modal = document.getElementById(idModal);
     if (modal) {
-        modal.showModal();
+        if (typeof modal.showModal === 'function') {
+            modal.showModal();
+        } else {
+            modal.setAttribute('open', '');
+        }
         document.body.style.overflow = "hidden";
     }
 }
@@ -39,7 +46,11 @@ function abrirModal(idModal) {
 function fecharModal(idModal) {
     const modal = document.getElementById(idModal);
     if (modal) {
-        modal.close();
+        if (typeof modal.close === 'function') {
+            modal.close();
+        } else {
+            modal.removeAttribute('open');
+        }
         document.body.style.overflow = "";
     }
 }
@@ -60,6 +71,27 @@ function fecharCertificado() {
     modal.style.display = "none";
     document.body.style.overflow = ""; // Destrava o scroll
 }
+
+function closeOpenDialogs() {
+    const openDialogs = document.querySelectorAll('dialog[open]');
+    openDialogs.forEach(dialog => dialog.close());
+    document.body.style.overflow = "";
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeOpenDialogs();
+        fecharCertificado();
+    }
+});
+
+document.querySelectorAll('dialog').forEach(dialog => {
+    dialog.addEventListener('close', () => {
+        if (!document.querySelector('dialog[open]')) {
+            document.body.style.overflow = "";
+        }
+    });
+});
 
 // Fechar modais ao clicar fora deles
 document.addEventListener('click', (event) => {
